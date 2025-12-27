@@ -1,1 +1,7 @@
-Readme
+# College ERP System
+
+Monorepo for College ERP application.
+
+- backend: Django REST API
+- frontend: React application
+- docs: Architecture and documentation
