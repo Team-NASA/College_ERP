@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from core.models import Department
+from core.models import Department, Subject
 
 
 class User(AbstractUser):
@@ -23,6 +23,12 @@ class User(AbstractUser):
         on_delete=models.SET_NULL,
         null=True,
         blank=True
+    )
+
+    subject=models.ManyToManyField(
+        Subject,
+        blank=True,
+        related_name='faculties'
     )
 
     def __str__(self):
